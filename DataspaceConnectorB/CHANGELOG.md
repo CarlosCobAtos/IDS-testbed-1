@@ -2,13 +2,32 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [x.x.x] - 2022-xx-xx
+## [7.0.3] - 2022-03-08
+
+### Added
+- Add title and description to `AppView`.
+- Add endpoint type to `AppEndpointView`.
+
+### Changed
+- Update IDS messaging services version from 6.0.1 to 6.1.0.
+- Set content type of payload when logging to the Clearing House, so that logged items are not
+  encoded in the Clearing House's response to a query.
+
+### Fixed
+- Use connector fingerprints instead of IDs to create processes at the Clearing House.
+
+### Fixed
+- Add relation annotation to `DatabaseDataSourceView` to display all `DataSources` in the same array.
+- Add missing semicolons in baseline.sql to comply with proper SQL syntax for flyway.
+
+## [7.0.2] - 2022-02-16
 
 ### Added
 - Add custom view for `DatabaseDataSource` to display URL and driver class.
 
 ### Changed
 - Update swagger-annotations version from 1.6.4 to 1.6.5.
+- Update postgresql version from 42.3.2 to 42.3.3.
 
 ## [7.0.1-ra] - 2022-02-15
 

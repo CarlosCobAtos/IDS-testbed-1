@@ -1,0 +1,27 @@
+version: '3'
+services:
+  nginx-proxy:
+    image: daps-reverseproxy
+    container_name: omejdn
+    volumes:
+      - ./certs:/etc/cert/
+    ports:
+    - "443:443" # IDS-HTTP API
+    - "80:80"    
+
+  omejdn-server:
+    image: daps
+    container_name: omejdn-server
+    volumes:
+      - ./config:/opt/config
+      - ./keys:/opt/keys
+    environment:
+    - COMPONENT_URI=https://localhost/
+    expose:
+    - "4567"
+    
+networks:
+    default:
+        external:
+            name: broker-localhost_default
+

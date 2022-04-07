@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2020 Fraunhofer Institute for Software and Systems Engineering
+    Copyright 2020-2022 Fraunhofer Institute for Software and Systems Engineering
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@
 	<name>Dataspace Connector</name>
 	<description>IDS Connector originally developed by the Fraunhofer ISST</description>
 	<url>https://www.dataspace-connector.io/</url>
-	<inceptionYear>2020</inceptionYear>
+	<inceptionYear>2020-2022</inceptionYear>
 	<organization>
 		<name>Fraunhofer Institute for Software and Systems Engineering</name>
 		<url>https://www.isst.fraunhofer.de/</url>
@@ -85,7 +85,7 @@
 
 	<properties>
 		<!-- General -->
-		<revision>7.0.1</revision>
+		<revision>7.0.3</revision>
 		<email>info@dataspace-connector.de</email>
 
 		<!-- Build info -->
@@ -94,13 +94,13 @@
 		<maven.minimum.version>3.3.9</maven.minimum.version>
 
 		<!-- Dependencies -->
-		<ids-messaging-services.version>6.0.1</ids-messaging-services.version>
+		<ids-messaging-services.version>6.1.0</ids-messaging-services.version>
 		<springframework.plugin>2.0.0.RELEASE</springframework.plugin>
 		<swagger-annotations.version>1.6.5</swagger-annotations.version>
 		<okhttp.version>4.9.3</okhttp.version>
 		<modelmapper.version>3.0.0</modelmapper.version>
 		<jackson.version>2.13.1</jackson.version>
-		<postgres.version>42.3.2</postgres.version>
+		<postgres.version>42.3.3</postgres.version>
 		<springdoc.version>1.6.6</springdoc.version>
 		<equalsverifier.version>3.9</equalsverifier.version>
 		<jaeger.version>3.3.1</jaeger.version>

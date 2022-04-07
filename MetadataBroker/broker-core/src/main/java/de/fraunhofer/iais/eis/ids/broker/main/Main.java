@@ -17,6 +17,9 @@ import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -52,9 +55,14 @@ public class Main extends MainTemplate implements ComponentInteractorProvider {
     @Value("${infomodel.validateWithShacl}")
     private boolean validateShacl;
 
+    @Value("${ssl.javakeystore}")
+    public String javaKeystorePath;
+
     //Environment allows us to access application.properties
     @Autowired
     private Environment env;
+
+
 
     /**
      * This function is called during startup and takes care of the initialization
@@ -70,12 +78,21 @@ public class Main extends MainTemplate implements ComponentInteractorProvider {
         sslCertificatePath = env.getProperty("ssl.certificatePath");
         elasticsearchHostname = env.getProperty("elasticsearch.hostname");
         elasticsearchPort = Integer.parseInt(Objects.requireNonNull(env.getProperty("elasticsearch.port")));
+        refreshAtBeginning = Boolean.parseBoolean(env.getProperty("index.refreshAtBeginning"));
+        refreshHours = Integer.parseInt(env.getProperty("index.refreshHours"));
         keystorePassword = env.getProperty("keystore.password");
         keystoreAlias = env.getProperty("keystore.alias");
 //        componentIdsId = env.getProperty("component.idsid");
         dapsUrl = env.getProperty("daps.url");
         trustAllCerts = Boolean.parseBoolean(env.getProperty("ssl.trustAllCerts"));
         ignoreHostName = Boolean.parseBoolean(env.getProperty("ssl.ignoreHostName"));
+
+        try {
+            javakeystore = new FileInputStream(new File(javaKeystorePath));
+            logger.info("Found KeyStore at {}.", javaKeystorePath);
+        } catch (FileNotFoundException e) {
+            logger.warn("Could not find a KeyStore at {}.", javaKeystorePath);
+        }
 
         try {
             multipartComponentInteractor = new AppConfig(createSelfDescriptionProvider())

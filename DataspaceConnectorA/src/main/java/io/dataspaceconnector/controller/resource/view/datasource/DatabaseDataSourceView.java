@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Fraunhofer Institute for Software and Systems Engineering
+ * Copyright 2020-2022 Fraunhofer Institute for Software and Systems Engineering
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,11 @@
  */
 package io.dataspaceconnector.controller.resource.view.datasource;
 
+import io.dataspaceconnector.config.BaseType;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.hateoas.server.core.Relation;
 
 /**
  * A DTO for controlled exposing of database data source information in API responses.
@@ -25,6 +27,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
+@Relation(collectionRelation = BaseType.DATA_SOURCES, itemRelation = "datasource")
 public class DatabaseDataSourceView extends DataSourceView {
 
     /**

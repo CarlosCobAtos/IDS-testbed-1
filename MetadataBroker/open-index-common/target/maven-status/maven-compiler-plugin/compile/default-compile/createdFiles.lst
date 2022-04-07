@@ -2,8 +2,8 @@ de/fraunhofer/iais/eis/ids/index/common/persistence/ConstructQueryResultHandler.
 de/fraunhofer/iais/eis/ids/index/common/persistence/RepositoryFacade.class
 de/fraunhofer/iais/eis/ids/index/common/persistence/JsonLdContextFetchStrategy.class
 de/fraunhofer/iais/eis/ids/index/common/persistence/INFOMODEL.class
-de/fraunhofer/iais/eis/ids/index/common/persistence/DescriptionProvider.class
 de/fraunhofer/iais/eis/ids/index/common/persistence/GenericQueryEvaluator.class
+de/fraunhofer/iais/eis/ids/index/common/persistence/DescriptionProvider.class
 de/fraunhofer/iais/eis/ids/index/common/persistence/NullIndexing.class
 de/fraunhofer/iais/eis/ids/index/common/persistence/DescriptionRequestHandler.class
 de/fraunhofer/iais/eis/ids/index/common/persistence/ModelCreator$1.class

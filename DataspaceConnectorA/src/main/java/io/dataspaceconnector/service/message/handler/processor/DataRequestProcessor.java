@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Fraunhofer Institute for Software and Systems Engineering
+ * Copyright 2020-2022 Fraunhofer Institute for Software and Systems Engineering
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,8 @@ import io.dataspaceconnector.service.message.builder.type.ArtifactResponseServic
 import io.dataspaceconnector.service.message.handler.dto.Response;
 import io.dataspaceconnector.service.message.handler.dto.RouteMsg;
 import io.dataspaceconnector.service.message.handler.processor.base.IdsProcessor;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -64,7 +66,7 @@ class DataRequestProcessor extends IdsProcessor<
      */
     @Override
     protected Response processInternal(final RouteMsg<ArtifactRequestMessageImpl,
-            MessagePayload> msg) throws Exception {
+            MessagePayload> msg, final Jws<Claims> claims) throws Exception {
         final var artifact = MessageUtils.extractRequestedArtifact(msg.getHeader());
         final var issuer = MessageUtils.extractIssuerConnector(msg.getHeader());
         final var messageId = MessageUtils.extractMessageId(msg.getHeader());
