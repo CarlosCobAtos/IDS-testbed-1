@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+  connectora:
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:7.0.2
+    container_name: connectora
+    ports:
+      - 8080:8080
+    networks:
+      - default
+    volumes:
+      - ./dataspaceconnectora/conf:/conf
+    environment:
+      - CONFIGURATION_PATH=/conf/config.json        
+      - DAPS_URL=https://omejdn
+      - DAPS_TOKEN_URL=https://omejdn/token    
+      - SERVER_SSL_KEY-STORE=/conf/connectorA.p12
+    restart: always
+  connectorb:
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:7.0.2
+    container_name: connectorb
+    ports:
+      - 8081:8081
+    networks:
+      - default
+    volumes:
+      - ./dataspaceconnectorb/conf:/conf
+    environment:
+      - SERVER_PORT=8081
+      - CONFIGURATION_PATH=/conf/config.json        
+      - DAPS_URL=https://omejdn
+      - DAPS_TOKEN_URL=https://omejdn/token   
+      - SERVER_SSL_KEY-STORE=/conf/connectorB.p12
+    restart: always
+           
+networks:
+  default:
+    external:
+      name: broker-localhost_default
