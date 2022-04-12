@@ -1,0 +1,12 @@
+%link{:type => "text/css", :rel => "stylesheet", :href => "css/main.css"}
+<center>
+%div
+  %img{:src => "img/logo.jpg", :class => "logo"}
+%form{:action => "./logout/exec", :method => "post"}
+  %fieldset
+    %h2 Are you sure you want to log out?
+    %br
+    - locals.each do |key,value|
+      %input{:type => "hidden", :name => "#{key}", :value => "#{value}"}
+    %input{:type => "submit", :value => "Log me out", :class => "button"}
+</center>

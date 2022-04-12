@@ -1,0 +1,48 @@
+services:
+
+  nginx:
+    image: nginx:latest
+    container_name: omejdn
+#    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - OMEJDN_DOMAIN=https://omejdn
+      - OMEJDN_PATH=https://omejdn
+#      - UI_PATH=${UI_PATH}
+    volumes:
+#      - ./nginx.production.conf:/etc/nginx/templates/default.conf.template
+      - ./nginx.production.conf:/etc/nginx/templates/nginx.production.conf
+      - ./certs/daps.cert:/etc/nginx/daps.cert
+      - ./certs/daps.key:/etc/nginx/daps.key
+
+  omejdn-server:
+    image: ghcr.io/fraunhofer-aisec/omejdn-server:1.6.0
+    container_name: omejdn-server
+#    restart: unless-stopped
+    environment:
+      - OMEJDN_ISSUER=https://omejdn
+      - OMEJDN_FRONT_URL=https://omejdn
+      - OMEJDN_OPENID=true
+      - OMEJDN_ENVIRONMENT=production
+      - OMEJDN_ACCEPT_AUDIENCE=idsc:IDS_CONNECTORS_ALL
+      - OMEJDN_DEFAULT_AUDIENCE=idsc:IDS_CONNECTORS_ALL
+      - OMEJDN_ADMIN=admin:password
+    volumes:
+      - ./omejdn-server/config:/opt/config
+      - ./omejdn-server/keys:/opt/keys
+
+#  omejdn-ui:
+#    image: ghcr.io/fraunhofer-aisec/omejdn-ui:${UI_VERSION}
+#    restart: unless-stopped
+#    environment:
+#      - OIDC_ISSUER=${OMEJDN_ISSUER}
+#      - API_URL=${OMEJDN_ISSUER}/api/v1
+#      - CLIENT_ID=adminUI
+
+
+networks:
+  default:
+    external:
+      name: broker-localhost_default

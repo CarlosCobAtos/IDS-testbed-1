@@ -1,0 +1,16 @@
+---
+host: idsc:IDS_CONNECTORS_ALL
+openid: true
+token:
+  expiration: 3600
+  signing_key: signing_key.pem
+  algorithm: RS256
+  audience: idsc:IDS_CONNECTORS_ALL
+  issuer: https://omejdn
+id_token:
+  expiration: 360000
+  signing_key: signing_key.pem
+  algorithm: RS256
+  issuer: https://omejdn
+user_backend:
+- yaml

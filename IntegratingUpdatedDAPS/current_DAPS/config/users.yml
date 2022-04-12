@@ -1,0 +1,31 @@
+---
+- username: testUser
+  attributes:
+  - key: email
+    value: admin@example.com
+  - key: asdfasf
+    value: asdfasf
+  - key: exampleKey
+    value: exampleValue
+  password: "$2a$12$Be9.8qVsGOVpUFO4ebiMBel/TNetkPhnUkJ8KENHjHLiDG.IXi0Zi"
+  extern: 
+- username: "<yourAdminUsername>"
+  attributes:
+  - key: omejdn:api
+    value: true
+  - key: omejdn:admin
+    value: true
+  - key: name
+    value: Admin
+  password: "$2a$12$5/az8ELp43wDtbrSEP0l/eO7kJjdUNf3NO3JQBsfHBZbwuCr2dbqe"
+  extern: 
+- username: test
+  attributes:
+  - key: omejdn:api
+    value: true
+  - key: omejdn:admin
+    value: true
+  - key: name
+    value: Admin
+  password: "$2a$12$AWTVs5dCDd4KzPFZHpHLR.16fBqMG5MwUB2CcrqLcfxR2oNNcr28q"
+  extern: 

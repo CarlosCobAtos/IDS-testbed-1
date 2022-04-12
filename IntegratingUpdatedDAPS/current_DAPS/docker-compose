@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+#      - /path/to/certs:/etc/nginx/certs:ro
+      - ./certs:/etc/nginx/certs:ro
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+
+#  nginx-companion:
+#    image: jrcs/letsencrypt-nginx-proxy-companion
+#    volumes:
+#      - ./certs:/etc/nginx/certs:rw
+#      - /var/run/docker.sock:/var/run/docker.sock:ro
+#    volumes_from:
+#      - nginx-proxy:rw
+
+  omejdn-server:
+    image: daps
+    ports:
+      - "4567:4567"
+    environment:
+      - HOST=localhost
+      - OMEJDN_ADMIN=test:test
+      - VIRTUAL_PORT=4567
+      - VIRTUAL_HOST=localhost
+#      - LETSENCRYPT_HOST=localhost
+#      - LETSENCRYPT_EMAIL=test@localhost
+    volumes:
+      - ./config:/opt/config
+ #     - $PWD/config:/opt/config
+      - ./keys:/opt/keys

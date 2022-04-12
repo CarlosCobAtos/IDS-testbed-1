@@ -1,0 +1,97 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 178 (0xb2)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=DE, O=Fraunhofer, CN=IDS Test SubCA 2018
+        Validity
+            Not Before: Jul 13 08:00:18 2021 GMT
+            Not After : Jul 13 08:00:18 2023 GMT
+        Subject: C=ES, O=SQS, OU=TestLab, CN=594cdc93-acb7-4dee-8828-f1668ad6f754
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:fa:1e:34:a3:de:04:c2:34:a0:f7:ee:a8:f6:dc:
+                    32:33:cf:16:ca:df:a4:80:17:e8:df:38:b9:71:cf:
+                    22:bd:2b:78:d0:9c:85:01:f1:af:d1:44:0d:ec:be:
+                    9d:8c:cb:cc:cd:6c:a0:c5:16:4d:5a:04:99:68:a6:
+                    41:f1:ff:48:1d:71:36:a7:ba:5d:fe:cf:5b:df:28:
+                    56:cb:1b:36:b1:0e:07:ec:ef:c5:8d:aa:9f:dc:fe:
+                    b2:11:b7:96:a0:2e:b3:82:de:7c:d5:66:dc:0f:f2:
+                    30:e9:bc:6c:e8:d2:02:ec:13:5c:71:0b:ca:26:9d:
+                    95:1a:be:f6:56:34:49:65:8c:7c:ea:dc:aa:d8:96:
+                    0d:9f:20:19:12:90:6c:78:4a:c4:00:7c:37:42:49:
+                    2f:21:11:fe:c1:4c:2c:e6:8f:23:27:f2:86:68:9e:
+                    4d:41:7f:eb:17:77:2c:fd:dd:8e:de:73:14:4e:98:
+                    79:e6:78:1f:af:b6:89:85:44:74:e2:5c:cc:9d:a6:
+                    9f:1e:b4:21:92:dd:54:51:a1:c4:a8:32:a9:5b:38:
+                    60:9d:7c:16:b7:8b:d6:b7:26:28:b9:64:40:c4:45:
+                    fb:f8:2a:59:1c:65:36:47:0f:e8:b5:4d:1d:09:11:
+                    1c:04:cc:84:ea:ab:d7:ee:4b:c3:be:49:07:6b:c7:
+                    8a:8d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                C6:3E:DE:2B:E7:00:3F:2A:84:C0:1D:BF:41:2C:E6:65:82:44:E8:AC
+            X509v3 Authority Key Identifier: 
+                keyid:CB:8C:C7:B6:85:79:A8:23:A6:CB:15:AB:17:50:2F:E6:65:43:5D:E8
+
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.aisec.fraunhofer.de/ids.crl
+
+            Authority Information Access: 
+                CA Issuers - URI:http://downloads.aisec.fraunhofer.de/rootcacert2016.cert
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication, TLS Web Server Authentication
+            X509v3 Subject Alternative Name: 
+                DNS:testidsa10, DNS:testconnector10.internationaldataspaces.org, DNS:localhost, IP Address:127.0.0.1
+    Signature Algorithm: sha256WithRSAEncryption
+         06:21:b2:42:57:5a:c8:d1:be:1f:fd:91:34:08:b8:16:81:de:
+         87:16:98:34:e3:06:59:e7:7a:67:b3:57:3b:7c:c6:d0:7b:42:
+         6e:3a:37:b5:c2:3a:38:cc:41:47:2d:12:02:4f:5b:82:13:f2:
+         5a:c3:f7:00:87:54:ed:ed:54:3d:bd:97:0d:2a:5b:b5:1f:cd:
+         db:fe:97:06:99:5f:e8:d9:49:f0:e9:cf:11:76:c7:fe:79:8c:
+         bd:30:62:82:e7:5f:c0:cd:6e:28:fe:12:7a:87:09:90:52:4f:
+         0b:02:e1:ce:79:0a:c3:78:72:d5:e2:58:fe:ac:04:9b:43:36:
+         b3:02:3b:f2:81:07:db:f9:50:e8:cd:77:f4:62:70:d8:1b:b0:
+         f7:1d:4d:97:3f:78:b6:92:43:2f:54:a8:ac:61:3a:65:2f:79:
+         77:1e:e9:11:7c:e7:e2:54:8d:20:d5:16:25:14:07:b8:cd:63:
+         66:4c:8e:ed:db:24:55:b7:b5:45:8f:f9:eb:c0:3f:29:54:b4:
+         11:8a:15:a4:c3:a2:1a:58:8e:25:f4:6c:50:8a:d0:77:a4:3b:
+         4d:99:93:a6:ae:6b:04:38:f8:61:d1:51:19:12:78:6e:35:89:
+         b7:0d:22:0c:4b:e6:b2:e2:6f:ea:f7:9d:24:47:ac:db:26:0e:
+         1e:c8:59:92
+-----BEGIN CERTIFICATE-----
+MIIEeTCCA2GgAwIBAgICALIwDQYJKoZIhvcNAQELBQAwQDELMAkGA1UEBhMCREUx
+EzARBgNVBAoMCkZyYXVuaG9mZXIxHDAaBgNVBAMME0lEUyBUZXN0IFN1YkNBIDIw
+MTgwHhcNMjEwNzEzMDgwMDE4WhcNMjMwNzEzMDgwMDE4WjBcMQswCQYDVQQGEwJF
+UzEMMAoGA1UECgwDU1FTMRAwDgYDVQQLDAdUZXN0TGFiMS0wKwYDVQQDDCQ1OTRj
+ZGM5My1hY2I3LTRkZWUtODgyOC1mMTY2OGFkNmY3NTQwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQD6HjSj3gTCNKD37qj23DIzzxbK36SAF+jfOLlxzyK9
+K3jQnIUB8a/RRA3svp2My8zNbKDFFk1aBJlopkHx/0gdcTanul3+z1vfKFbLGzax
+Dgfs78WNqp/c/rIRt5agLrOC3nzVZtwP8jDpvGzo0gLsE1xxC8omnZUavvZWNEll
+jHzq3KrYlg2fIBkSkGx4SsQAfDdCSS8hEf7BTCzmjyMn8oZonk1Bf+sXdyz93Y7e
+cxROmHnmeB+vtomFRHTiXMydpp8etCGS3VRRocSoMqlbOGCdfBa3i9a3Jii5ZEDE
+Rfv4KlkcZTZHD+i1TR0JERwEzITqq9fuS8O+SQdrx4qNAgMBAAGjggFfMIIBWzAd
+BgNVHQ4EFgQUxj7eK+cAPyqEwB2/QSzmZYJE6KwwHwYDVR0jBBgwFoAUy4zHtoV5
+qCOmyxWrF1Av5mVDXegwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwNwYDVR0fBDAw
+LjAsoCqgKIYmaHR0cDovL2NybC5haXNlYy5mcmF1bmhvZmVyLmRlL2lkcy5jcmww
+VAYIKwYBBQUHAQEESDBGMEQGCCsGAQUFBzAChjhodHRwOi8vZG93bmxvYWRzLmFp
+c2VjLmZyYXVuaG9mZXIuZGUvcm9vdGNhY2VydDIwMTYuY2VydDAdBgNVHSUEFjAU
+BggrBgEFBQcDAgYIKwYBBQUHAwEwUwYDVR0RBEwwSoIKdGVzdGlkc2ExMIIrdGVz
+dGNvbm5lY3RvcjEwLmludGVybmF0aW9uYWxkYXRhc3BhY2VzLm9yZ4IJbG9jYWxo
+b3N0hwR/AAABMA0GCSqGSIb3DQEBCwUAA4IBAQAGIbJCV1rI0b4f/ZE0CLgWgd6H
+Fpg04wZZ53pns1c7fMbQe0JuOje1wjo4zEFHLRICT1uCE/Jaw/cAh1Tt7VQ9vZcN
+Klu1H83b/pcGmV/o2Unw6c8Rdsf+eYy9MGKC51/AzW4o/hJ6hwmQUk8LAuHOeQrD
+eHLV4lj+rASbQzazAjvygQfb+VDozXf0YnDYG7D3HU2XP3i2kkMvVKisYTplL3l3
+HukRfOfiVI0g1RYlFAe4zWNmTI7t2yRVt7VFj/nrwD8pVLQRihWkw6IaWI4l9GxQ
+itB3pDtNmZOmrmsEOPhh0VEZEnhuNYm3DSIMS+ay4m/q950kR6zbJg4eyFmS
+-----END CERTIFICATE-----
